@@ -11,7 +11,8 @@ __copyright__ = "(c) 2018 Anderson Araujo (coderpy)"
 __all__ = ("GoogleReCaptcha",)
 
 from flask import request
-from jinja2 import Markup
+from jinja2.utils import markupsafe 
+Markup = markupsafe.Markup
 from json import loads
 
 try:
